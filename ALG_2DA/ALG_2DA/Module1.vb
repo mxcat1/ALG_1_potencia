@@ -1,5 +1,5 @@
 ﻿Module Module1
-    Dim r, s, t, x As Integer
+    Dim r, s, t As Integer
     Sub Main()
         Console.ForegroundColor = 10
         Console.Write("ingrese un valor para la variable R: ")
@@ -35,7 +35,7 @@
         'r += 1
         'Loop
 
-        For x = r To 6
+        For r = r To 6
             If t = 1 Then
                 s += 3
                 t = 0
@@ -45,7 +45,7 @@
             End If
         Next
 
-        Console.WriteLine("EL VALOR FINAL DE R ES ------------> " & x)
+        Console.WriteLine("EL VALOR FINAL DE R ES ------------> " & r)
         Console.WriteLine("EL VALOR FINAL DE R ES ------------> " & s)
         Console.WriteLine("EL VALOR FINAL DE R ES ------------> " & t)
         Console.ReadLine()
