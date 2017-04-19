@@ -11,12 +11,14 @@
 
         Do Until r = 7
             If t = 1 Then
+
                 s += 3
                 t = 0
+                Console.WriteLine(r & " " & s & " " & t)
             Else
                 s += 5
                 t = 1
-
+                Console.WriteLine(r & " " & s & " " & t)
             End If
             r += 1
 
