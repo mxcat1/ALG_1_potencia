@@ -9,19 +9,30 @@
         Console.Write("ingrese un valor para la variable T: ")
         t = Console.ReadLine()
 
-        Do Until r = 7
-            If t = 1 Then
+        'Do Until r = 7
+        'If t = 1 Then
 
+        's += 3
+        't = 0
+        'Console.WriteLine(r & " " & s & " " & t)
+        'Else
+        's += 5
+        't = 1
+        'Console.WriteLine(r & " " & s & " " & t)
+        'End If
+        'r += 1
+        '
+        'Loop
+        Do While r < 7
+            If t = 1 Then
                 s += 3
                 t = 0
-                Console.WriteLine(r & " " & s & " " & t)
             Else
                 s += 5
                 t = 1
-                Console.WriteLine(r & " " & s & " " & t)
+
             End If
             r += 1
-
         Loop
 
         Console.WriteLine("EL VALOR FINAL DE R ES ------------> " & r)
