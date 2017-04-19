@@ -1,6 +1,8 @@
 ﻿Module Module1
     Dim r, s, t As Integer
+    Dim e As String
     Sub Main()
+        e = "MM"
         Console.ForegroundColor = 10
         Console.Write("ingrese un valor para la variable R: ")
         r = Console.ReadLine()
@@ -45,9 +47,9 @@
             End If
         Next
 
-        Console.WriteLine("EL VALOR FINAL DE R ES ------------> " & r)
-        Console.WriteLine("EL VALOR FINAL DE R ES ------------> " & s)
-        Console.WriteLine("EL VALOR FINAL DE R ES ------------> " & t)
+        Console.WriteLine("EL VALOR FINAL DE R ES ------------> " + Str(r))
+        Console.WriteLine("EL VALOR FINAL DE S ES ------------> " + Str(s))
+        Console.WriteLine("EL VALOR FINAL DE T ES ------------> " + Str(t))
         Console.ReadLine()
 
     End Sub
