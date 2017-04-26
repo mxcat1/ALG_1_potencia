@@ -79,6 +79,7 @@
         Console.WriteLine("el valor final de ss ------------->" + Str(ss))
         Console.WriteLine("el valor final de rr ------------->" + Str(rr))
         Console.WriteLine("el valor final de tt ------------->" + Str(tt))
+        Console.WriteLine("GRACIAS")
         Console.ReadLine()
 
     End Sub
