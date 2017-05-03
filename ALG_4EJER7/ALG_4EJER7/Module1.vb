@@ -2,6 +2,7 @@
 
     Sub Main()
         Dim ff, c, i As Integer
+        Console.ForegroundColor = 10
         Console.Write("INGRESE UN NUEVO VALOR PARA FF-----------------------> ")
         ff = Console.ReadLine()
         c = 1
