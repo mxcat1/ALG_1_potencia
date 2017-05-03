@@ -28,15 +28,15 @@
         Console.Write("INGRESE UN NUEVO VALOR PARA FF-----------------------> ")
         ff = Console.ReadLine()
         c = 1
-        i = 1
+        i = 0
         Do Until c = 21
-            If i = 1 Then
-                i = 0
+            If i = 0 Then
+                i = 1
                 Console.WriteLine(Str(c) + "-" + Str(ff))
             Else
                 ff *= 2
                 Console.WriteLine(Str(c) + "-" + Str(ff))
-                i = 1
+                i = 0
             End If
             ff += 5
             Console.WriteLine(Str(c) + "-" + Str(ff))
