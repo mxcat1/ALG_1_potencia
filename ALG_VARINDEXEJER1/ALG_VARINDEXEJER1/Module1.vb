@@ -1,5 +1,14 @@
 ﻿Module Module1
+    Function tumod(ano, ala)
+        Dim c, r, d, dd, divi As Integer
+        divi = ala
+        d = ano
+        c = d / divi
+        dd = c * divi
+        r = d - dd
+        Return r
 
+    End Function
     Sub Main()
         Dim meses(12), fecha As String
         Dim dd, mm, aa, dias(12) As Integer
@@ -32,26 +41,27 @@
 
 
         Console.WriteLine("Propgrama que edita y valida una fecha")
-        Console.Write("Ingrese el año en dos dugitos")
+        Console.Write("Ingrese el año en dos digitos----->")
         aa = Console.ReadLine()
         Do While aa < 0 Or aa > 99
-            Console.Write("EL AÑO NO ES VALIDO VUELVA A INGRESAR")
+            Console.Write("EL AÑO NO ES VALIDO VUELVA A INGRESAR----->")
             aa = Console.ReadLine()
         Loop
-        Console.Write("INGRESE EL MES EN DOS DIGITOS")
+        Console.WriteLine(tumod(aa + 2000))
+
+        Console.Write("INGRESE EL MES EN DOS DIGITOS----->")
         mm = Console.ReadLine()
         Do While mm < 0 Or mm > 12
-            Console.Write("EL MES NO ES VALIDO VUELVA A INGRESAR")
+            Console.Write("EL MES NO ES VALIDO VUELVA A INGRESAR----->")
             mm = Console.ReadLine()
         Loop
-        Console.Write("INGRESE EL DIA EN DOS DIGITOS")
+        Console.Write("INGRESE EL DIA EN DOS DIGITOS---->")
         dd = Console.ReadLine()
         Do While dd < 1 Or dd > dias(mm)
-            Console.Write("EL DIA NO ES VALIDO VUELVA A INGRESAR")
+            Console.Write("EL DIA NO ES VALIDO VUELVA A INGRESAR---->")
             dd = Console.ReadLine()
         Loop
         fecha = Str(dd) + " de " + meses(mm) + " del" & Str(aa + 2000)
-
 
         Console.Write("LA FECHA ES :  " + fecha)
         Console.ReadLine()
