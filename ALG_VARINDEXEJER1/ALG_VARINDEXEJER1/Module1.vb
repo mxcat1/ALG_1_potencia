@@ -4,8 +4,11 @@
         divi = ala
         d = ano
         c = d / divi
+        Console.WriteLine(c)
         dd = c * divi
+        Console.WriteLine(dd)
         r = d - dd
+        Console.WriteLine(r)
         Return r
 
     End Function
@@ -47,7 +50,7 @@
             Console.Write("EL AÑO NO ES VALIDO VUELVA A INGRESAR----->")
             aa = Console.ReadLine()
         Loop
-        Console.WriteLine(tumod(aa + 2000))
+        Console.WriteLine(tumod(aa + 2000, 4))
 
         Console.Write("INGRESE EL MES EN DOS DIGITOS----->")
         mm = Console.ReadLine()
