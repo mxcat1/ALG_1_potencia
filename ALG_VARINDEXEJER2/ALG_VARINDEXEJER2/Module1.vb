@@ -49,7 +49,7 @@
 
         Next
         Console.WriteLine("LAS VENTAS TOTAL SON : " + Str(total))
-        Console.WriteLine("LAS VENTAS TOTAL SON : " + Str(total / n))
+        Console.WriteLine("EL PROMEDIO ES : " + Str(total / n))
 
         Console.ReadLine()
 
