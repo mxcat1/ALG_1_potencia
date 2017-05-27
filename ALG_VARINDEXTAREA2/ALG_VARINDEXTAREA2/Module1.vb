@@ -1,7 +1,7 @@
 ﻿Module Module1
 
     Sub Main()
-        Dim dd, mm, aa, dd1, mm1, aa1, t1, t2, mesess, diasp, uldias(12) As Integer
+        Dim dd, mm, aa, dd1, mm1, aa1, t1, t2, diasp, uldias(12) As Integer
         Dim meses(12) As String
         diasp = 0
         meses(1) = "ENERO"
