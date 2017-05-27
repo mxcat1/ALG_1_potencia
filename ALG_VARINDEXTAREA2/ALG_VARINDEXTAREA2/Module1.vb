@@ -1,7 +1,7 @@
 ﻿Module Module1
 
     Sub Main()
-        Dim dd, mm, aa, dd1, mm1, aa1, t1, t2, dias, diasp, uldias(12) As Integer
+        Dim dd, mm, aa, dd1, mm1, aa1, t1, t2, mesess, diasp, uldias(12) As Integer
         Dim meses(12) As String
         diasp = 0
         meses(1) = "ENERO"
@@ -36,7 +36,6 @@
         Console.WriteLine("PROGRAMA QUE AL SUMAR UNOS DIAS, DE UNA FECHA NUEVA Y ")
         Console.WriteLine("PROGRAMA QUE INDIQUE LA CANTIDAD DE DIAS Q HAY ENTRE DOS FECHAS")
         Console.WriteLine("INDIQUE LA FECHA INICIAL")
-
 
         Do Until aa > 0 And aa < 99
             Console.Write("INGRESE EL AÑO EN DOS DIGITOS------> ")
@@ -113,23 +112,26 @@
         Loop
         Console.WriteLine("LA FECHA FINAL ES" + Str(aa1) + " " + meses(mm1) + Str(dd1))
 
-        For y = mm To mm1
-            Do Until dd = dd1
-                'Do While dd < uldias(mm)
-                '    dd = dd + 1
-                '    diasp = diasp + 1
-                'Loop
-                If dd = uldias(mm) Then
-                    dd = 1
-                    mm = mm + 1
-                    diasp = diasp + 1
-                Else
-                    dd = dd + 1
-                    diasp = diasp + 1
+        Do Until mm = mm1 And dd = dd1 And aa = aa1
+            'Do Until dd = dd1 And aa = aa1
+            'Do While dd < uldias(mm)
+            '    dd = dd + 1
+            '    diasp = diasp + 1
+            'Loop
+            If dd = uldias(mm) Then
+                dd = 1
+                mm = mm + 1
+                diasp = diasp + 1
+                If mm > 12 Then
+                    mm = 1
+                    aa = aa + 1
                 End If
-            Loop
-
-        Next
+            Else
+                dd = dd + 1
+                diasp = diasp + 1
+            End If
+            'Loop
+        Loop
 
         Console.WriteLine("HAN PASADO" + Str(diasp) + " DIAS")
         'FIN
