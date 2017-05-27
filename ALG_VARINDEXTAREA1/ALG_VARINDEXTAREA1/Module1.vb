@@ -64,76 +64,77 @@
 
         Console.WriteLine("LA FECHA INICIAL ES" + Str(aa) + " " + meses(mm) + Str(dd))
 
-        ''INICIO ALGORTIMOS PARA QUE AL SUMAR UNA CANTIDAD DE DIAS NOS DE LA NUEVA
-        ''FECHA
-        'Console.WriteLine("-----------------------------------------------------")
-        'Console.WriteLine("PROGRAMA DE SUMA DE DIAS ")
-        'Console.Write("INDIQUE CUANTOS DIAS SE VA A SUMAR PARA LA NUEVA FECHA ---->")
-        'dias = Console.ReadLine()
-
-        'For x = 1 To dias
-        '    dd = dd + 1
-        '    If dd > uldias(mm) Then
-        '        dd = 1
-        '        mm = mm + 1
-        '        If mm > 12 Then
-        '            mm = 1
-        '        End If
-        '    End If
-        'Next
-        ''FIN
-        'Console.WriteLine("LA NUEVA FECHA ES" + Str(aa) + " " + meses(mm) + Str(dd))
-        'INICIO DEL ALGORITMO PARA SABER CUANTOS DIAS HASYA ENTRE DOS FECHAS
+        'INICIO ALGORTIMOS PARA QUE AL SUMAR UNA CANTIDAD DE DIAS NOS DE LA NUEVA
+        'FECHA
         Console.WriteLine("-----------------------------------------------------")
-        Console.WriteLine("PROGRAMA PARA SACARLA CANTIDAD DE DIAS QUE HAY ENTRE DOS FECHAS")
-        Console.WriteLine("INDIQUE LA FECHA FINAL")
+        Console.WriteLine("PROGRAMA DE SUMA DE DIAS ")
+        Console.Write("INDIQUE CUANTOS DIAS SE VA A SUMAR PARA LA NUEVA FECHA ---->")
+        dias = Console.ReadLine()
 
-        Do Until aa1 > 0 And aa1 < 99
-            Console.Write("INGRESE EL AÑO EN DOS DIGITOS------> ")
-            aa1 = Console.ReadLine()
-        Loop
-        ''INICIO ALGORITMO PARA SACAR SI UN AÑO ES BISISESTO NO INCLUYE AÑOS MULTIPLOS DE 400 O SI SON DIVISIBLES ENTRE 100
-        aa1 = aa1 + 2000
-        t1 = aa1 / 4
-        t2 = t1 * 4
-        If t2 = aa1 Then
-            Console.WriteLine("EL AÑO " + Str(aa1) + " ES BISIESTO")
-            uldias(2) = 29
-        Else
-            Console.WriteLine("EL AÑO " + Str(aa1) + " NO ES BISIESTO")
-        End If
-        ''FIN
-        Do Until mm1 > 0 And mm1 < 13
-            Console.Write("INGRESE EL MES EN DOS DIGITOS------------>")
-            mm1 = Console.ReadLine()
-        Loop
-        Do Until dd1 > 0 And dd1 < uldias(mm) + 1
-            Console.Write("INGRESE EL DIA EN DOS DIGITOS-------------->")
-            dd1 = Console.ReadLine()
-        Loop
-        Console.WriteLine("LA FECHA FINAL ES" + Str(aa1) + " " + meses(mm1) + Str(dd1))
-
-        For y = mm To mm1
-            Do Until dd = dd1
-                'Do While dd < uldias(mm)
-                '    dd = dd + 1
-                '    diasp = diasp + 1
-                'Loop
-                If dd = uldias(mm) Then
-                    dd = 1
-                    mm = mm + 1
-                    diasp = diasp + 1
-                Else
-                    dd = dd + 1
-                    diasp = diasp + 1
+        For x = 1 To dias
+            dd = dd + 1
+            If dd > uldias(mm) Then
+                dd = 1
+                mm = mm + 1
+                If mm > 12 Then
+                    mm = 1
+                    aa = aa + 1
                 End If
-            Loop
-
+            End If
         Next
-
-        Console.WriteLine("HAN PASADO" + Str(diasp) + " DIAS")
         'FIN
-        Console.WriteLine(Str(aa) + " " + meses(mm) + Str(dd))
+        Console.WriteLine("LA NUEVA FECHA ES" + Str(aa) + " " + meses(mm) + Str(dd))
+        ''INICIO DEL ALGORITMO PARA SABER CUANTOS DIAS HASYA ENTRE DOS FECHAS
+        'Console.WriteLine("-----------------------------------------------------")
+        'Console.WriteLine("PROGRAMA PARA SACARLA CANTIDAD DE DIAS QUE HAY ENTRE DOS FECHAS")
+        'Console.WriteLine("INDIQUE LA FECHA FINAL")
+
+        'Do Until aa1 > 0 And aa1 < 99
+        '    Console.Write("INGRESE EL AÑO EN DOS DIGITOS------> ")
+        '    aa1 = Console.ReadLine()
+        'Loop
+        '''INICIO ALGORITMO PARA SACAR SI UN AÑO ES BISISESTO NO INCLUYE AÑOS MULTIPLOS DE 400 O SI SON DIVISIBLES ENTRE 100
+        'aa1 = aa1 + 2000
+        't1 = aa1 / 4
+        't2 = t1 * 4
+        'If t2 = aa1 Then
+        '    Console.WriteLine("EL AÑO " + Str(aa1) + " ES BISIESTO")
+        '    uldias(2) = 29
+        'Else
+        '    Console.WriteLine("EL AÑO " + Str(aa1) + " NO ES BISIESTO")
+        'End If
+        '''FIN
+        'Do Until mm1 > 0 And mm1 < 13
+        '    Console.Write("INGRESE EL MES EN DOS DIGITOS------------>")
+        '    mm1 = Console.ReadLine()
+        'Loop
+        'Do Until dd1 > 0 And dd1 < uldias(mm) + 1
+        '    Console.Write("INGRESE EL DIA EN DOS DIGITOS-------------->")
+        '    dd1 = Console.ReadLine()
+        'Loop
+        'Console.WriteLine("LA FECHA FINAL ES" + Str(aa1) + " " + meses(mm1) + Str(dd1))
+
+        'For y = mm To mm1
+        '    Do Until dd = dd1
+        '        'Do While dd < uldias(mm)
+        '        '    dd = dd + 1
+        '        '    diasp = diasp + 1
+        '        'Loop
+        '        If dd = uldias(mm) Then
+        '            dd = 1
+        '            mm = mm + 1
+        '            diasp = diasp + 1
+        '        Else
+        '            dd = dd + 1
+        '            diasp = diasp + 1
+        '        End If
+        '    Loop
+
+        'Next
+
+        'Console.WriteLine("HAN PASADO" + Str(diasp) + " DIAS")
+        ''FIN
+        'Console.WriteLine(Str(aa) + " " + meses(mm) + Str(dd))
         Console.ReadLine()
 
     End Sub
