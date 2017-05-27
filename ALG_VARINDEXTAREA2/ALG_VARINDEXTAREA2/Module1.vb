@@ -63,25 +63,6 @@
 
         Console.WriteLine("LA FECHA INICIAL ES" + Str(aa) + " " + meses(mm) + Str(dd))
 
-        ''INICIO ALGORTIMOS PARA QUE AL SUMAR UNA CANTIDAD DE DIAS NOS DE LA NUEVA
-        ''FECHA
-        'Console.WriteLine("-----------------------------------------------------")
-        'Console.WriteLine("PROGRAMA DE SUMA DE DIAS ")
-        'Console.Write("INDIQUE CUANTOS DIAS SE VA A SUMAR PARA LA NUEVA FECHA ---->")
-        'dias = Console.ReadLine()
-
-        'For x = 1 To dias
-        '    dd = dd + 1
-        '    If dd > uldias(mm) Then
-        '        dd = 1
-        '        mm = mm + 1
-        '        If mm > 12 Then
-        '            mm = 1
-        '        End If
-        '    End If
-        'Next
-        ''FIN
-        'Console.WriteLine("LA NUEVA FECHA ES" + Str(aa) + " " + meses(mm) + Str(dd))
         'INICIO DEL ALGORITMO PARA SABER CUANTOS DIAS HASYA ENTRE DOS FECHAS
         Console.WriteLine("-----------------------------------------------------")
         Console.WriteLine("PROGRAMA PARA SACARLA CANTIDAD DE DIAS QUE HAY ENTRE DOS FECHAS")
@@ -113,11 +94,6 @@
         Console.WriteLine("LA FECHA FINAL ES" + Str(aa1) + " " + meses(mm1) + Str(dd1))
 
         Do Until mm = mm1 And dd = dd1 And aa = aa1
-            'Do Until dd = dd1 And aa = aa1
-            'Do While dd < uldias(mm)
-            '    dd = dd + 1
-            '    diasp = diasp + 1
-            'Loop
             If dd = uldias(mm) Then
                 dd = 1
                 mm = mm + 1
@@ -130,7 +106,6 @@
                 dd = dd + 1
                 diasp = diasp + 1
             End If
-            'Loop
         Loop
 
         Console.WriteLine("HAN PASADO" + Str(diasp) + " DIAS")
