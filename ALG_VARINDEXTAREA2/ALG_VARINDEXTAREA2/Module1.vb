@@ -97,15 +97,14 @@
             If dd = uldias(mm) Then
                 dd = 1
                 mm = mm + 1
-                diasp = diasp + 1
-                If mm > 12 Then
-                    mm = 1
-                    aa = aa + 1
-                End If
             Else
                 dd = dd + 1
-                diasp = diasp + 1
             End If
+            If mm > 12 Then
+                mm = 1
+                aa = aa + 1
+            End If
+            diasp = diasp + 1
         Loop
 
         Console.WriteLine("HAN PASADO" + Str(diasp) + " DIAS")

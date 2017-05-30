@@ -71,15 +71,16 @@
         dias = Console.ReadLine()
 
         For x = 1 To dias
-            dd = dd + 1
+
             If dd > uldias(mm) Then
                 dd = 1
                 mm = mm + 1
-                If mm > 12 Then
-                    mm = 1
-                    aa = aa + 1
-                End If
             End If
+            If mm > 12 Then
+                mm = 1
+                aa = aa + 1
+            End If
+            dd = dd + 1
         Next
         'FIN
         Console.WriteLine("LA NUEVA FECHA ES" + Str(aa) + " " + meses(mm) + Str(dd))
