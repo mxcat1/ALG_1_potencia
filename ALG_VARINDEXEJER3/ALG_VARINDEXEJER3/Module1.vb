@@ -2,7 +2,7 @@
 
     Sub Main()
         'Dim x, y As Integer
-        Dim nomb(8), nombre As String
+        Dim nomb(8), nombre, eleccion As String
         'nomb(1) = "Mario"
         'nomb(2) = "Susana"
         'nomb(3) = "Andres"
@@ -38,19 +38,60 @@
         '    Loop
         '    x = x + 1
         'Loop
-        For x = 1 To 7
-            For y = x + 1 To 8
-                If nomb(x) > nomb(y) Then
-                    nombre = nomb(x)
-                    nomb(x) = nomb(y)
-                    nomb(y) = nombre
-                Else
-
-                End If
+        'For x = 1 To 7
+        '    For y = x + 1 To 8
+        '        If (nomb(x) > nomb(y) And nomb(y) <> " ") Or nomb(x) = " " Then
+        '            Console.WriteLine(Str(x) + "-" + Str(y) + "nombre= " + nombre)
+        '            Console.WriteLine(Str(x) + "-" + Str(y) + "nombre x= " + nomb(x))
+        '            Console.WriteLine(Str(x) + "-" + Str(y) + "nombre y= " + nomb(y))
+        '            nombre = nomb(x)
+        '            nomb(x) = nomb(y)
+        '            nomb(y) = nombre
+        '            Console.WriteLine(Str(x) + "-" + Str(y) + "nombre= " + nombre)
+        '            Console.WriteLine(Str(x) + "-" + Str(y) + "nombre x= " + nomb(x))
+        '            Console.WriteLine(Str(x) + "-" + Str(y) + "nombre y= " + nomb(y))
+        '        End If
+        '    Next
+        'Next
+        Console.Write("ELIJA SI QUIERE QUE SE ORDENE DE FORMA ASCENDENTE(a) O DESCENDENTE(b) ")
+        eleccion = Console.ReadLine()
+        If eleccion = "a" Then 'eleccion del usuario para que sea ascendente o descendente
+            For x = 1 To 7
+                For y = x + 1 To 8
+                    If (nomb(x) > nomb(y) And nomb(y) <> " ") Or nomb(x) = " " Then
+                        'Parallel entender
+                        'Console.WriteLine(Str(x) + "-" + Str(y) + "nombre= " + nombre)
+                        'Console.WriteLine(Str(x) + "-" + Str(y) + "nombre x= " + nomb(x))
+                        'Console.WriteLine(Str(x) + "-" + Str(y) + "nombre y= " + nomb(y))
+                        nombre = nomb(x)
+                        nomb(x) = nomb(y)
+                        nomb(y) = nombre
+                        'Console.WriteLine(Str(x) + "-" + Str(y) + "nombre= " + nombre)
+                        'Console.WriteLine(Str(x) + "-" + Str(y) + "nombre x= " + nomb(x))
+                        'Console.WriteLine(Str(x) + "-" + Str(y) + "nombre y= " + nomb(y))
+                    End If
+                Next
             Next
-        Next
+        ElseIf eleccion = "d" Then
+            For x = 1 To 7
+                For y = x + 1 To 8
+                    If (nomb(x) < nomb(y) And nomb(y) <> " ") Or nomb(x) = " " Then
+                        Console.WriteLine(Str(x) + "-" + Str(y) + "nombre= " + nombre)
+                        Console.WriteLine(Str(x) + "-" + Str(y) + "nombre x= " + nomb(x))
+                        Console.WriteLine(Str(x) + "-" + Str(y) + "nombre y= " + nomb(y))
+                        nombre = nomb(x)
+                        nomb(x) = nomb(y)
+                        nomb(y) = nombre
+                        Console.WriteLine(Str(x) + "-" + Str(y) + "nombre= " + nombre)
+                        Console.WriteLine(Str(x) + "-" + Str(y) + "nombre x= " + nomb(x))
+                        Console.WriteLine(Str(x) + "-" + Str(y) + "nombre y= " + nomb(y))
+                    End If
+                Next
+            Next
+        End If
+
         Console.WriteLine("------------------------------------------------")
-        Console.WriteLine("DATOS ORDENADOS")
+        Console.WriteLine("---------------DATOS ORDENADOS------------------")
         Console.WriteLine("------------------------------------------------")
         For c = 1 To 8
             Console.WriteLine("DATOS " + Str(c) + " " + nomb(c))
