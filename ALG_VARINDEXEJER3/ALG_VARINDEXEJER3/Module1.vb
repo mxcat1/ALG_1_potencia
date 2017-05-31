@@ -55,40 +55,45 @@
         'Next
         Console.Write("ELIJA SI QUIERE QUE SE ORDENE DE FORMA ASCENDENTE(a) O DESCENDENTE(b) ")
         eleccion = Console.ReadLine()
-        If eleccion = "a" Then 'eleccion del usuario para que sea ascendente o descendente
-            For x = 1 To 7
-                For y = x + 1 To 8
+        Do While eleccion <> "a" And eleccion <> "d"
+            Console.Write("SU RESPUESTA ES INCORRECTA VUELVA A INGRESAR PARA QUE SE ORDENE DE FORMA ASCENDENTE(a) O DESCENDENTE(b) ")
+            eleccion = Console.ReadLine()
+        Loop
+
+
+        For x = 1 To 7
+            For y = x + 1 To 8
+                If eleccion = "a" Then 'eleccion del usuario para que sea ascendente o descendente
                     If (nomb(x) > nomb(y) And nomb(y) <> " ") Or nomb(x) = " " Then
-                        'Parallel entender
-                        'Console.WriteLine(Str(x) + "-" + Str(y) + "nombre= " + nombre)
-                        'Console.WriteLine(Str(x) + "-" + Str(y) + "nombre x= " + nomb(x))
-                        'Console.WriteLine(Str(x) + "-" + Str(y) + "nombre y= " + nomb(y))
-                        nombre = nomb(x)
-                        nomb(x) = nomb(y)
-                        nomb(y) = nombre
-                        'Console.WriteLine(Str(x) + "-" + Str(y) + "nombre= " + nombre)
-                        'Console.WriteLine(Str(x) + "-" + Str(y) + "nombre x= " + nomb(x))
-                        'Console.WriteLine(Str(x) + "-" + Str(y) + "nombre y= " + nomb(y))
-                    End If
-                Next
-            Next
-        ElseIf eleccion = "d" Then
-            For x = 1 To 7
-                For y = x + 1 To 8
-                    If (nomb(x) < nomb(y) And nomb(y) <> " ") Or nomb(x) = " " Then
+                        'Para entender
                         Console.WriteLine(Str(x) + "-" + Str(y) + "nombre= " + nombre)
                         Console.WriteLine(Str(x) + "-" + Str(y) + "nombre x= " + nomb(x))
                         Console.WriteLine(Str(x) + "-" + Str(y) + "nombre y= " + nomb(y))
-                        nombre = nomb(x)
-                        nomb(x) = nomb(y)
+                        nombre = nomb(x) 'esto solo se procedera a ejecutar solo cuando se cumpla
+                        nomb(x) = nomb(y) 'nomb(x)>nomb(y)
                         nomb(y) = nombre
                         Console.WriteLine(Str(x) + "-" + Str(y) + "nombre= " + nombre)
                         Console.WriteLine(Str(x) + "-" + Str(y) + "nombre x= " + nomb(x))
                         Console.WriteLine(Str(x) + "-" + Str(y) + "nombre y= " + nomb(y))
+
                     End If
-                Next
+                Else
+                    If nomb(x) < nomb(y) Then
+                        'Para entender
+                        'Console.WriteLine(Str(x) + "-" + Str(y) + "nombre= " + nombre)
+                        'Console.WriteLine(Str(x) + "-" + Str(y) + "nombre x= " + nomb(x))
+                        'Console.WriteLine(Str(x) + "-" + Str(y) + "nombre y= " + nomb(y))
+                        nombre = nomb(x) 'esto solo se procedera a ejecutar solo cuando se cumpla
+                        nomb(x) = nomb(y) 'nomb(x)>nomb(y)
+                        nomb(y) = nombre
+                        'Console.WriteLine(Str(x) + "-" + Str(y) + "nombre= " + nombre)
+                        'Console.WriteLine(Str(x) + "-" + Str(y) + "nombre x= " + nomb(x))
+                        'Console.WriteLine(Str(x) + "-" + Str(y) + "nombre y= " + nomb(y))
+
+                    End If
+                End If
             Next
-        End If
+        Next
 
         Console.WriteLine("------------------------------------------------")
         Console.WriteLine("---------------DATOS ORDENADOS------------------")
