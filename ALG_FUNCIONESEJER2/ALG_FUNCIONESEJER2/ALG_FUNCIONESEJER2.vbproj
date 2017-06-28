@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{18F88743-9AD2-42BD-AEE1-759EF8C45A29}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <StartupObject>ALG_FUNCIONESEJER2.Module1</StartupObject>
+    <StartupObject>ALG_FUNCIONESEJER2.Module2</StartupObject>
     <RootNamespace>ALG_FUNCIONESEJER2</RootNamespace>
     <AssemblyName>ALG_FUNCIONESEJER2</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -69,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Module1.vb" />
+    <Compile Include="Module2.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
