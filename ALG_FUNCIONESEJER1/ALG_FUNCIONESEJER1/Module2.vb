@@ -40,52 +40,40 @@
         exc_cv(3) = "TRECE"
         exc_cv(4) = "CATORCE"
         exc_cv(5) = "QUINCE"
-        n = x
         c_cv = Int(n / 100)
         d_cv = Int((n - (c_cv * 100)) / 10)
         u_cv = Int(n - (c_cv * 100) - (d_cv * 10))
         If c_cv = 0 And d_cv = 0 And u_cv = 0 Then
             texto_cv = "CERO"
-            Console.WriteLine(texto_cv)
         Else
             If c_cv = 1 And d_cv = 0 And u_cv = 0 Then
                 texto_cv = "CIEN"
-                Console.WriteLine(texto_cv)
             Else
                 If c_cv > 0 And d_cv = 0 And u_cv > 0 Then
                     texto_cv = cen_cv(c_cv) & " " & uni_cv(u_cv)
-                    Console.WriteLine(texto_cv)
                 Else
                     If c_cv > 0 And d_cv > 0 And u_cv = 0 Then
                         texto_cv = cen_cv(c_cv) & "  " & dec_cv(d_cv)
-                        Console.WriteLine(texto_cv)
                     Else
                         If c_cv > 0 And d_cv = 1 And (u_cv > 0 And u_cv < 6) Then
                             texto_cv = cen_cv(c_cv) & " " & exc_cv(u_cv)
-                            Console.WriteLine(texto_cv)
                         Else
                             If c_cv > 0 And d_cv = 0 And u_cv = 0 Then
                                 texto_cv = cen_cv(c_cv)
-                                Console.WriteLine(texto_cv)
                             Else
                                 If c_cv = 0 And d_cv > 0 And u_cv = 0 Then
                                     texto_cv = dec_cv(d_cv)
-                                    Console.WriteLine(texto_cv)
                                 Else
                                     If c_cv = 0 And d_cv = 1 And (u_cv > 0 And u_cv < 6) Then
                                         texto_cv = exc_cv(u_cv)
-                                        Console.WriteLine(texto_cv)
                                     Else
                                         If c_cv = 0 And d_cv = 0 And u_cv > 0 Then
                                             texto_cv = uni_cv(u_cv)
-                                            Console.WriteLine(texto_cv)
                                         Else
                                             If c_cv = 0 And d_cv > 0 And u_cv > 0 Then
                                                 texto_cv = dec_cv(d_cv) & " Y " & uni_cv(u_cv)
-                                                Console.WriteLine(texto_cv)
                                             Else
                                                 texto_cv = cen_cv(c_cv) & " " & dec_cv(d_cv) & " Y " & uni_cv(u_cv)
-                                                Console.WriteLine(texto_cv)
                                             End If
                                         End If
                                     End If
