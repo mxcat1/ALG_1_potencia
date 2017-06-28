@@ -35,8 +35,10 @@
                 nnum = nnum + tredigitos(g3)
             End If
         End If
+        Process.Start(Environment.GetFolderPath(Environment.SpecialFolder.System) & "\mspaint.exe", "D:\Imagen.jpg")
         Console.WriteLine(nnum)
         Console.ReadLine()
+
     End Sub
 
 End Module
