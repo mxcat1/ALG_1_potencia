@@ -45,8 +45,6 @@
                     persona(v) = nombres(lugar(v))
                     'Console.WriteLine("LA PERSONA " + persona(v) + " EN EL LUGAR" + Str(lugar(v)) + " TIENE LA NOTA IGUAL A " + Str(mayor))
                     'Console.WriteLine(Str(v))
-
-
                 End If
             End If
 
