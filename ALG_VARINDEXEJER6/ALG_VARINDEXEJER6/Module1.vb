@@ -50,6 +50,8 @@
             End If
 
         Next
+        'el caso de que haya mas de 2 valores mayores iguales la variable indexada que las almacenaria
+        'se crearia dependiendo de eso
         If max(1) = max(2) Then
             For g = 1 To 2
                 Console.WriteLine("LA NOTA MAYOR ES DE" + Str(mayor) + " Y LA TIENE " + persona(g))
