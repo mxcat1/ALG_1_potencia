@@ -2,7 +2,7 @@
 
     Sub Main()
         Dim nombres(13), persona(13) As String
-        Dim notas(13), mayor, max(13), lugar(13), v As Integer
+        Dim notas(13), mayor, lugar(13), v As Integer
 
         nombres(1) = "Andrea"
         nombres(2) = "Lucia"
@@ -43,7 +43,6 @@
                     v = v + 1
                     lugar(v) = x
                     persona(v) = nombres(lugar(v))
-                    max(v) = mayor
                     'Console.WriteLine("LA PERSONA " + persona(v) + " EN EL LUGAR" + Str(lugar(v)) + " TIENE LA NOTA IGUAL A " + Str(mayor))
                     'Console.WriteLine(Str(v))
 
